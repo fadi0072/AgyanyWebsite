@@ -4,16 +4,13 @@ import SlideUp from '../animation';
 import LettersSlideUp from '../animation/letter';
 const HeroBanner = () => {
   return (
-    <section className="relative min-h-[70vh] h-[90vh] px-4 md:px-0 rounded-b-2xl md:rounded-b-4xl w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] h-[90vh] px-4 md:px-0 w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img
-        className="absolute rounded-b-2xl md:rounded-b-4xl inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         src="/innovation-bg.png"
         alt="Innovation background"
       />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
       <div className="container mx-auto">

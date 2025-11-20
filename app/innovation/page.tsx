@@ -14,7 +14,7 @@ const Page = () => {
       <HeroBanner />
 
       <section className="relative py-12 md:py-16 px-4 md:px-0">
-        <div className="mb-8 md:mb-10 container mx-auto">
+        <div className="container mx-auto px-4 md:px-0 mb-4 md:mb-6">
           <LettersSlideUp>
             <div className="mb-5 text-[#297F95] max-w-max mx-auto md:mx-0 font-['Plus_Jakarta_Sans'] text-base md:text-[18px] font-bold leading-normal rounded-[400px] bg-[#DEF5F7] px-4 md:px-6 py-2 md:py-3">
               Vision
@@ -32,10 +32,17 @@ const Page = () => {
             </h2>
           </SlideUp>
         </div>
-        <div className="hidden md:block">
-          <img src="/vision.png" alt="" className="w-full relative -top-12 md:-top-20 lg:-top-32" />
+        <div className="relative w-full -mx-4 md:-mx-0 -mt-4 md:-mt-6">
+          <Image
+            src="/vision.png"
+            alt="Vision"
+            width={1200}
+            height={1300}
+            className="object-cover w-full md:w-auto md:max-w-6xl"
+          />
         </div>
-        <div className="mb-10 md:-mt-[150px] lg:-mt-[200px] container mx-auto px-4 md:px-0">
+
+        <div className="container mx-auto px-4 md:px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-10">
             <div className="relative w-full max-w-lg mx-auto lg:mx-0">
               <Image
@@ -43,7 +50,7 @@ const Page = () => {
                 alt="Doctors analyzing brain scan"
                 width={600}
                 height={700}
-                className="rounded-2xl object-cover w-full shadow-lg"
+                className="object-cover w-full"
               />
             </div>
             <div className="flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-5">
@@ -56,7 +63,7 @@ const Page = () => {
                 <SlideUp delay={0.2}>
                   <h2 className="text-lg sm:text-xl md:text-2xl mb-4 font-semibold font-['Plus_Jakarta_Sans'] wrap-break-word leading-6 md:leading-7">
                     We share our concepts for developing new treatments for patients with
-                    Parkinson's disease (PD) with innovative research, aiming to advance
+                    Parkinson&apos;s disease (PD) with innovative research, aiming to advance
                     neuroscience breakthroughs into specialized medicines. The identification of the
                     link between mutations in the Gaucher gene, known as GBA1, responsible for
                     encoding the lysosomal enzyme glucocerebrosidase, and synucleinopathies,
@@ -165,7 +172,7 @@ const Page = () => {
               alt="Investors"
               width={600}
               height={400}
-              className="rounded-2xl object-cover w-full shadow-lg"
+              className="object-cover w-full"
             />
           </div>
         </div>
@@ -177,7 +184,7 @@ const Page = () => {
               alt="Partnering"
               width={600}
               height={400}
-              className="rounded-2xl object-cover w-full shadow-lg"
+              className="object-cover w-full"
             />
           </div>
           <div className="flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-5 order-2 lg:order-2">

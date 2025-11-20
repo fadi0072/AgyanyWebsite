@@ -15,7 +15,7 @@ const Header = () => {
       // On mobile, reduce the scroll threshold
       const isMobile = window.innerWidth < 768;
       const threshold = isMobile ? 200 : 500;
-      
+
       if (window.scrollY > threshold) {
         if (window.scrollY > lastScrollY) {
           setShow('hide');
@@ -83,19 +83,19 @@ const Header = () => {
 
   return (
     <header className={headerClasses}>
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-7 py-2 sm:py-2.5 md:py-3 flex justify-between items-center">
-        {/* Logo */}
-        <Link 
-          href="/" 
+<div className="max-w-7xl mx-auto px-3 sm:px-3 md:px-4 py-0 flex justify-between items-center">
+{/* Logo */}
+        <Link
+          href="/"
           className="text-xl font-semibold tracking-wide flex items-center shrink-0"
           onClick={() => setMenuOpen(false)}
         >
-          <Image 
-            src="/logo.svg" 
-            width={60} 
-            height={60} 
-            alt="logo" 
-            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[100px] md:h-[100px]" 
+          <Image
+            src="/logo.svg"
+            width={60}
+            height={60}
+            alt="logo"
+            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[100px] md:h-[100px]"
             priority
           />
         </Link>
@@ -157,9 +157,7 @@ const Header = () => {
       {/* Mobile Dropdown */}
       <div
         className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out overflow-hidden ${
-          menuOpen
-            ? 'max-h-[85vh] opacity-100 visible'
-            : 'max-h-0 opacity-0 invisible'
+          menuOpen ? 'max-h-[85vh] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
         }`}
       >
         <nav className="flex flex-col items-stretch py-4 space-y-1 px-4">

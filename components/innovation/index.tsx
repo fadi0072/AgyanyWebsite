@@ -2,19 +2,35 @@
 
 import Image from 'next/image';
 import SlideUp from '../animation';
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function InnovationSection() {
   const sectionsRef = useRef<HTMLDivElement[]>([]);
 
+  // Slide Content Data
+  const slides = [
+    {
+      title: 'Discovery',
+      desc: 'Our journey starts in the genome — uncovering the GBA1 gene and its connection to Parkinson’s disease.',
+    },
+    {
+      title: 'Innovation',
+      desc: 'Leveraging advanced research tools, we decode disease progression and uncover new therapeutic pathways.',
+    },
+    {
+      title: 'Breakthrough',
+      desc: 'Transforming scientific insights into tangible treatments that redefine the future of Parkinson’s care.',
+    },
+  ];
+
   useEffect(() => {
     const sections = sectionsRef.current;
 
-    sections.forEach((section, i) => {
+    sections.forEach((section) => {
       if (!section) return;
 
       gsap.fromTo(
@@ -25,20 +41,19 @@ export default function InnovationSection() {
           y: -100,
           scrollTrigger: {
             trigger: section,
-            start: "top top",
-            end: "bottom top",
+            start: 'top top',
+            end: 'bottom top',
             scrub: true,
             pin: true,
             pinSpacing: false,
           },
-        }
+        },
       );
     });
   }, []);
 
   return (
     <section className="relative container mx-auto py-12 md:py-16 px-4 md:px-0 bg-[#DEF5F7]">
-
       {/* Heading */}
       <div className="flex justify-center items-center flex-col gap-4 md:gap-6 mb-8 md:mb-10">
         <SlideUp>
@@ -56,7 +71,7 @@ export default function InnovationSection() {
 
       {/* Sticky Sections */}
       <div className="relative">
-        {[1, 2, 3].map((item, index) => (
+        {slides.map((slide, index) => (
           <div
             key={index}
             ref={(el) => {
@@ -66,9 +81,9 @@ export default function InnovationSection() {
           >
             {/* Left Image */}
             <div className="relative w-full md:w-[70%] lg:w-full text-center max-w-md mx-auto">
-             <Image
-                src={`/innovation-${item}.png`}
-                alt={`brain scan ${item}`}
+              <Image
+                src={`/innovation-${index + 1}.png`}
+                alt={`innovation slide ${index + 1}`}
                 width={400}
                 height={400}
                 className="object-cover w-full"
@@ -79,18 +94,17 @@ export default function InnovationSection() {
             <div className="flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-5">
               <div className="max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto">
                 <h3 className="text-[#0A0A0A] mb-3 font-['Plus_Jakarta_Sans'] text-xl md:text-2xl lg:text-[30px] font-semibold">
-                 Discovery
+                  {slide.title}
                 </h3>
 
                 <p className="text-[#474747] font-['Roboto'] text-base md:text-xl lg:text-[22px] font-normal">
-                  Our journey starts in the genome — uncovering the GBA1 gene and its link to Parkinson's disease.
+                  {slide.desc}
                 </p>
               </div>
             </div>
           </div>
         ))}
       </div>
-
     </section>
   );
 }

@@ -16,7 +16,9 @@ const Footer = () => {
               Follow us
             </h6>
             <a
-              href="#research"
+              href="https://ch.linkedin.com/company/agyanypharma"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold font-['Plus_Jakarta_Sans'] text-[#297F95] rounded-[400px] border-[1.2px] border-[#297F95] transition-all hover:bg-[#297F95] hover:text-white"
             >
               <img src="/linkedin-icon.png" alt="" className="w-5 h-5" />

@@ -74,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ colorScheme: 'light' }}>
-      <body className={`${plusJakartaSans.variable} ${roboto.variable} antialiased`} style={{ colorScheme: 'light' }}>
+      <body className={`${plusJakartaSans.variable} ${roboto.variable} antialiased`}>
         <ScrollToTop />
         <main>
           <Header />
