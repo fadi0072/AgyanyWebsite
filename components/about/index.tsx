@@ -49,8 +49,8 @@ export default function AboutSection() {
                  from-[#10052F] to-[#297F95] 
                  bg-clip-text text-transparent"
           >
-            &ldquo;Empowering lives through innovative neuroscience solutions, Agyany is dedicated to
-            redefining Parkinson&apos;s disease treatment and delivering hope to patients
+            &ldquo;Empowering lives through innovative neuroscience solutions, Agyany is dedicated
+            to redefining Parkinson&apos;s disease treatment and delivering hope to patients
             worldwide.&rdquo;
           </h2>
         </SlideUp>
@@ -58,26 +58,22 @@ export default function AboutSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 overflow-visible">
         {/* Left Side: Image */}
-        <div className="relative w-full max-w-lg mx-auto lg:mx-0 overflow-visible" style={{ paddingBottom: '4rem', paddingTop: '2rem' }}>
+        <div
+          className="relative w-full max-w-lg mx-auto lg:mx-0 overflow-visible"
+          style={{ paddingBottom: '4rem', paddingTop: '2rem' }}
+        >
           {/* Blurred decorative circles */}
-          <div className="absolute w-64 h-56 bg-[#297F95] rounded-full blur-3xl opacity-20 -z-10" style={{ top: '-4rem', left: '-8rem' }} />
-          <div className="absolute w-64 h-56 bg-[#DEF5F7] rounded-full blur-3xl -z-10" style={{ bottom: '-4rem', right: '-8rem' }} />
-          
-          {/* Rotated outline decorative shape */}
-          <div 
-            className="absolute opacity-20 -z-10"
-            style={{ 
-              width: '751.31px',
-              height: '702.69px',
-              transformOrigin: 'top left',
-              transform: 'rotate(72.84deg)',
-              top: '-10rem',
-              left: '-15rem',
-              outline: '2px solid #297F95',
-              outlineOffset: '-1px'
-            }}
+          <div
+            className="absolute w-64 h-56 bg-[#297F95] rounded-full blur-3xl opacity-20 -z-10"
+            style={{ top: '-4rem', left: '-8rem' }}
           />
-          
+          <div
+            className="absolute w-64 h-56 bg-[#DEF5F7] rounded-full blur-3xl -z-10"
+            style={{ bottom: '-4rem', right: '-8rem' }}
+          />
+
+   
+
           {/* Dots indicator - top-left position */}
           <div className="absolute left-[62px] top-[48px] origin-top-left rotate-90 inline-flex flex-col justify-start items-start gap-4 z-20">
             {slides.map((_, index) => (
@@ -93,22 +89,22 @@ export default function AboutSection() {
               />
             ))}
           </div>
-          
+
           {/* Background Image - positioned to show decorative elements from top left and bottom right */}
           <img
             src="/mainpage/whoweareBG.png"
             alt=""
             className="absolute object-contain object-bottom-right"
-            style={{ 
+            style={{
               zIndex: 0,
               width: 'calc(100% + 30rem)',
               height: 'calc(100% + 6rem)',
-              left: '-20rem',
+              left: '-15rem',
               top: '-2rem',
               bottom: '-4rem',
               right: '-10rem',
               maxWidth: 'none',
-              maxHeight: 'none'
+              maxHeight: 'none',
             }}
           />
           {/* Foreground Image */}
@@ -118,7 +114,7 @@ export default function AboutSection() {
               alt="Doctors analyzing brain scan"
               width={600}
               height={400}
-              className="rounded-2xl object-cover w-full shadow-lg"
+              className="object-cover w-full"
             />
           </div>
         </div>
