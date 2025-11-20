@@ -22,35 +22,35 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Prof. Dr. Ari Zimran',
     title: 'Business & Financial Operations Specialist',
-    image: '/teams.png',
+    image: '/DrAri.png',
     description:
       'Prof. Dr. Ari Zimran is a renowned expert in business operations and strategic planning for global ventures.',
   },
   {
     name: 'Noel Mueller',
     title: 'Chief Financial Officer',
-    image: '/teams.png',
+    image: '/Noel.png',
     description:
       'Noel Mueller brings years of financial and strategic expertise to the executive team.',
   },
   {
     name: 'John Smith',
     title: 'Head of Research & Development',
-    image: '/teams.png',
+    image: '/john.png',
     description:
       'John leads the R&D team with a focus on innovation and cutting-edge solutions in life sciences.',
   },
   {
     name: 'Maria Gonzalez',
     title: 'Clinical Research Director',
-    image: '/teams.png',
+    image: '/Maria.png',
     description:
       'Maria oversees clinical research operations and ensures regulatory compliance across all global studies.',
   },
   {
     name: 'Dr. Lisa Brown',
     title: 'Chief Scientific Officer',
-    image: '/teams.png',
+    image: '/Lisa.png',
     description:
       'Dr. Lisa Brown drives scientific strategy and innovation across our research initiatives.',
   },

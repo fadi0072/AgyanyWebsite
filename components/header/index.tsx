@@ -30,10 +30,10 @@ const Header = () => {
 
   const navItems = [
     { label: 'About', href: '/about' },
-    { label: 'Patients', href: '#' },
+    { label: 'Patients', href: '/patient' },
     { label: 'Innovation', href: '/innovation' },
     { label: 'Pipeline', href: '/pipeline' },
-    { label: 'Careers', href: '#' },
+    { label: 'Careers', href: '/careers' },
   ];
 
   // Header animation classes
