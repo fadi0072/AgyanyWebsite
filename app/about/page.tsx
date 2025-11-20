@@ -39,7 +39,7 @@ const Page = () => {
               alt="Doctors analyzing brain scan"
               width={600}
               height={400}
-              className="rounded-2xl object-cover w-full shadow-lg"
+              className="object-cover w-full"
             />
           </div>
 
