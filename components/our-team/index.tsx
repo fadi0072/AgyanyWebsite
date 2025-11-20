@@ -63,40 +63,41 @@ export default function TeamSection() {
     <section className="w-full max-w-6xl mx-auto px-4 py-12">
       {/* Section Title */}
 
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12 gap-4 md:gap-0">
         <div className="col-span-12 md:col-span-2">
-          <p className="text-[#297F95] text-2xl md:text-xl text-center md:text-left font-bold font-['Plus_Jakarta_Sans'] mb-6">
+          <p className="text-[#297F95] text-xl md:text-2xl lg:text-xl text-center md:text-left font-bold font-['Plus_Jakarta_Sans'] mb-6">
             Our Team
           </p>
         </div>
         {/* Grid */}
         <div className="col-span-12 md:col-span-10">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center text-center relative">
                 {/* Image */}
-                <div className="relative">
+                <div className="relative w-full max-w-[240px]">
                   <Image
                     src={member.image}
                     alt={member.name}
                     width={240}
                     height={240}
-                    className="rounded-[12px] object-cover"
+                    className="rounded-[12px] object-cover w-full h-auto"
                   />
                   {/* Arrow Button */}
                   <button
                     onClick={() => setSelectedMember(member)}
-                    className="absolute top-2 right-2 w-9 h-9 cursor-pointer flex items-center justify-center rounded-full border border-[#0A0E0D] text-[#0A0E0D] bg-white hover:bg-[#0A0E0D] hover:text-white transition-all duration-300"
+                    className="absolute top-2 right-2 w-8 h-8 md:w-9 md:h-9 cursor-pointer flex items-center justify-center rounded-full border border-[#0A0E0D] text-[#0A0E0D] bg-white hover:bg-[#0A0E0D] hover:text-white transition-all duration-300"
+                    aria-label={`View details for ${member.name}`}
                   >
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
                   </button>
                 </div>
 
                 {/* Name & Title */}
-                <h3 className="mt-4 text-[#0A0E0D] text-lg font-semibold font-['Plus_Jakarta_Sans']">
+                <h3 className="mt-4 text-[#0A0E0D] text-base md:text-lg font-semibold font-['Plus_Jakarta_Sans']">
                   {member.name}
                 </h3>
-                <p className="text-[#007F8C] text-sm font-medium">{member.title}</p>
+                <p className="text-[#007F8C] text-xs md:text-sm font-medium">{member.title}</p>
               </div>
             ))}
           </div>
@@ -105,37 +106,38 @@ export default function TeamSection() {
       {/* Modal */}
       {selectedMember && (
         <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className="bg-white rounded-[16px] max-w-lg w-full p-8 relative"
+            className="bg-white rounded-[16px] max-w-lg w-full p-6 md:p-8 relative max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
-              className="absolute top-5 right-5 cursor-pointer text-gray-600 hover:text-black"
+              className="absolute top-4 right-4 md:top-5 md:right-5 cursor-pointer text-gray-600 hover:text-black text-2xl leading-none w-8 h-8 flex items-center justify-center"
               onClick={() => setSelectedMember(null)}
+              aria-label="Close modal"
             >
               ✕
             </button>
 
-            <div className="flex flex-col   gap-4">
-              <div className="flex gap-10 items-center justify-start">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 items-center sm:items-start justify-start">
                 <Image
                   src={selectedMember.image}
                   alt={selectedMember.name}
                   width={150}
                   height={150}
-                  className="rounded-[12px] object-cover"
+                  className="rounded-[12px] object-cover flex-shrink-0"
                 />
 
-                <div className="">
-                  <h3 className="text-xl font-semibold text-[#0A0E0D]">{selectedMember.name}</h3>
+                <div className="text-center sm:text-left">
+                  <h3 className="text-lg md:text-xl font-semibold text-[#0A0E0D]">{selectedMember.name}</h3>
                   <p className="text-[#007F8C] text-sm font-medium">{selectedMember.title}</p>
                 </div>
               </div>
-              <p className="text-[#555] text-base leading-relaxed mt-2">
+              <p className="text-[#555] text-sm md:text-base leading-relaxed mt-2">
                 {selectedMember.description}
               </p>
             </div>

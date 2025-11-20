@@ -37,18 +37,18 @@ export default function InnovationSection() {
   }, []);
 
   return (
-    <section className="relative container mx-auto py-16 pb-42 bg-[#DEF5F7]">
+    <section className="relative container mx-auto py-12 md:py-16 px-4 md:px-0 bg-[#DEF5F7]">
 
       {/* Heading */}
-      <div className="flex justify-center items-center flex-col gap-6 mb-10">
+      <div className="flex justify-center items-center flex-col gap-4 md:gap-6 mb-8 md:mb-10">
         <SlideUp>
-          <div className="text-[#297F95] max-w-max bg-white font-['Plus_Jakarta_Sans'] text-[18px] font-bold rounded-[400px] px-6 py-3">
+          <div className="text-[#297F95] max-w-max bg-white font-['Plus_Jakarta_Sans'] text-base md:text-[18px] font-bold rounded-[400px] px-4 md:px-6 py-2 md:py-3">
             Innovation
           </div>
         </SlideUp>
 
         <SlideUp>
-          <h2 className="text-[#10052F] max-w-[85%] md:max-w-[70%] mx-auto text-center font-['Plus_Jakarta_Sans'] text-xl md:text-[38px] font-semibold">
+          <h2 className="text-[#10052F] max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto text-center font-['Plus_Jakarta_Sans'] text-lg sm:text-xl md:text-2xl lg:text-[38px] font-semibold">
             Pioneering Breakthroughs in Parkinson's Disease Treatment through Scientific Innovation
           </h2>
         </SlideUp>
@@ -62,10 +62,10 @@ export default function InnovationSection() {
             ref={(el) => {
               if (el) sectionsRef.current[index] = el;
             }}
-            className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 w-full min-h-screen sticky-section"
+            className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 md:gap-10 w-full min-h-[80vh] md:min-h-screen sticky-section px-4 md:px-0"
           >
             {/* Left Image */}
-            <div className="relative w-[70%] md:w-full text-center max-w-md mx-auto">
+            <div className="relative w-full md:w-[70%] lg:w-full text-center max-w-md mx-auto">
              <Image
                 src={`/innovation-${item}.png`}
                 alt={`brain scan ${item}`}
@@ -76,14 +76,14 @@ export default function InnovationSection() {
             </div>
 
             {/* Right Text */}
-            <div className="flex flex-col justify-center text-center lg:text-left space-y-5">
-              <div className="max-w-[85%] md:max-w-[70%] mx-auto">
-                <h3 className="text-[#0A0A0A] mb-3 font-['Plus_Jakarta_Sans'] text-2xl md:text-[30px] font-semibold">
+            <div className="flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-5">
+              <div className="max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto">
+                <h3 className="text-[#0A0A0A] mb-3 font-['Plus_Jakarta_Sans'] text-xl md:text-2xl lg:text-[30px] font-semibold">
                  Discovery
                 </h3>
 
-                <p className="text-[#474747] font-['Roboto'] text-xl md:text-[22px] font-normal">
-                  Our journey starts in the genome — uncovering the GBA1 gene and its link to Parkinson’s disease.
+                <p className="text-[#474747] font-['Roboto'] text-base md:text-xl lg:text-[22px] font-normal">
+                  Our journey starts in the genome — uncovering the GBA1 gene and its link to Parkinson's disease.
                 </p>
               </div>
             </div>

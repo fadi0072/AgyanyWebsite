@@ -64,6 +64,7 @@ export const metadata: Metadata = {
     apple: '/favicon.ico',
   },
   manifest: '/manifest.json',
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
@@ -72,8 +73,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${plusJakartaSans.variable} ${roboto.variable} antialiased`}>
+    <html lang="en" style={{ colorScheme: 'light' }}>
+      <body className={`${plusJakartaSans.variable} ${roboto.variable} antialiased`} style={{ colorScheme: 'light' }}>
         <ScrollToTop />
         <main>
           <Header />

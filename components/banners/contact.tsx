@@ -3,11 +3,12 @@
 import LettersSlideUp from '../animation/letter';
 const HeroBanner = () => {
   return (
-    <section className="relative h-[50vh] md:h-[70vh] px-4 md:px-0 rounded-b-4xl w-full flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
+    <section className="relative min-h-[50vh] h-[50vh] md:h-[70vh] px-4 md:px-0 rounded-b-2xl md:rounded-b-4xl w-full flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
       <img
-        className="absolute rounded-b-4xl inset-0 w-full h-full object-cover"
-        src="/contact-banner.png" // place your video file in /public/videos/
+        className="absolute rounded-b-2xl md:rounded-b-4xl inset-0 w-full h-full object-cover"
+        src="/contact-banner.png"
+        alt="Contact background"
       />
 
       {/* Overlay */}
@@ -15,9 +16,9 @@ const HeroBanner = () => {
 
       {/* Content */}
       <div className="container mx-auto">
-        <div className="relative z-10  max-w-3xl mr-auto text-start px-4 text-white">
+        <div className="relative z-10 max-w-3xl mx-auto md:mr-auto text-center md:text-start px-4 text-white">
           <LettersSlideUp>
-            <h1 className="text-2xl md:text-5xl  font-['Roboto'] font-semibold leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-['Roboto'] font-semibold leading-tight">
               Contact
             </h1>
           </LettersSlideUp>

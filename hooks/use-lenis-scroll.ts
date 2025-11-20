@@ -8,12 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const useLenisScroll = () => {
   useEffect(() => {
+    // Check if device is mobile/touch
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || 
+                     ('ontouchstart' in window) || 
+                     (navigator.maxTouchPoints > 0);
+    
     const lenis = new Lenis({
-      duration: 1.8, // smooth & slightly slow
+      duration: isMobile ? 1.2 : 1.8, // Faster on mobile for better UX
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       wheelMultiplier: 0.9, // control wheel scroll speed
-      touchMultiplier: 1.2,
+      touchMultiplier: isMobile ? 1.5 : 1.2, // Better touch responsiveness on mobile
       infinite: false,
+      smoothWheel: !isMobile, // Disable smooth wheel on mobile for native feel
+      smoothTouch: false, // Use native touch scrolling on mobile
     });
 
     // RAF loop — keeps GSAP in sync with Lenis

@@ -14,11 +14,11 @@ interface ProgressProps {
 
 const ProgressBar: React.FC<ProgressProps> = ({ title, stages, gradientFrom, gradientTo }) => {
   return (
-    <div className="w-full">
-      <h3 className="text-center text-[#10052F] mb-5 text-3xl font-semibold font-['Plus_Jakarta_Sans'] uppercase leading-9">
+    <div className="w-full px-2 md:px-0">
+      <h3 className="text-center text-[#10052F] mb-4 md:mb-5 text-xl md:text-2xl lg:text-3xl font-semibold font-['Plus_Jakarta_Sans'] uppercase leading-7 md:leading-9">
         {title}
       </h3>
-      <div className="relative h-3 rounded-full bg-gray-200 overflow-hidden">
+      <div className="relative h-2 md:h-3 rounded-full bg-gray-200 overflow-hidden">
         <div
           className={`absolute left-0 top-0 h-full rounded-full`}
           style={{
@@ -28,9 +28,9 @@ const ProgressBar: React.FC<ProgressProps> = ({ title, stages, gradientFrom, gra
         />
       </div>
 
-      <div className="flex justify-between text-[#10052F] text-[14px] text-center md:text-[18px] font-normal font-['Roboto'] leading-5 md:leading-7  mt-2 ">
+      <div className="flex flex-wrap justify-between text-[#10052F] text-xs md:text-sm lg:text-[14px] xl:text-[18px] text-center font-normal font-['Roboto'] leading-4 md:leading-5 lg:leading-7 mt-2 gap-1 md:gap-0">
         {stages.map((stage, idx) => (
-          <span key={idx} className="text-center md:whitespace-nowrap">
+          <span key={idx} className="text-center flex-1 min-w-[60px] md:whitespace-nowrap">
             {stage.label}
           </span>
         ))}
