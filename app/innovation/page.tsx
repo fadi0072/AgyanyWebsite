@@ -32,7 +32,7 @@ const Page = () => {
             </h2>
           </SlideUp>
         </div>
-        <div className="relative w-full -mx-4 md:-mx-0 z-10 -mt-2 md:-mt-3 mb-4 md:mb-6 bottom-45">
+        <div className="relative w-full -mx-4 md:-mx-0 z-10 -mt-2 md:-mt-3 mb-4 md:mb-6">
           <Image
             src="/vision.png"
             alt="Vision"

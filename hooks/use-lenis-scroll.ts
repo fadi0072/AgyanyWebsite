@@ -20,7 +20,6 @@ export const useLenisScroll = () => {
       touchMultiplier: isMobile ? 1.5 : 1.2, // Better touch responsiveness on mobile
       infinite: false,
       smoothWheel: !isMobile, // Disable smooth wheel on mobile for native feel
-      smoothTouch: false, // Use native touch scrolling on mobile
     });
 
     // RAF loop — keeps GSAP in sync with Lenis
