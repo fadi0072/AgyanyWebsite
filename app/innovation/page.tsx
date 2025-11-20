@@ -14,14 +14,14 @@ const Page = () => {
       <HeroBanner />
 
       <section className="relative py-12 md:py-16 px-4 md:px-0">
-        <div className="container mx-auto px-4 md:px-0 mb-4 md:mb-6">
+        <div className="container mx-auto px-4 md:px-0 mb-0">
           <LettersSlideUp>
             <div className="mb-5 text-[#297F95] max-w-max mx-auto md:mx-0 font-['Plus_Jakarta_Sans'] text-base md:text-[18px] font-bold leading-normal rounded-[400px] bg-[#DEF5F7] px-4 md:px-6 py-2 md:py-3">
               Vision
             </div>
           </LettersSlideUp>
           <SlideUp>
-            <h2 className="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl md:text-2xl lg:text-[38px] font-semibold wrap-break-word leading-[120%] bg-gradient-to-r from-[#10052F] to-[#297F95] bg-clip-text text-transparent text-center md:text-left">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl md:text-2xl lg:text-[38px] font-semibold wrap-break-word leading-[120%] bg-gradient-to-r from-[#10052F] to-[#297F95] bg-clip-text text-transparent text-center md:text-left mb-0 pb-0">
               Combining excellent clinical understanding and patient centric programs with
               cutting-edge technologies for the development of new treatment for Parkinson disease
               requires exceptional performance at every level. A sustainable and responsible
@@ -32,13 +32,13 @@ const Page = () => {
             </h2>
           </SlideUp>
         </div>
-        <div className="relative w-full -mx-4 md:-mx-0 -mt-4 md:-mt-6">
+        <div className="relative w-full -mx-4 md:-mx-0 z-10 -mt-2 md:-mt-3 mb-4 md:mb-6 bottom-45">
           <Image
             src="/vision.png"
             alt="Vision"
             width={1200}
             height={1300}
-            className="object-cover w-full md:w-auto md:max-w-6xl"
+            className="object-contain w-full md:w-[30%] h-auto relative z-10"
           />
         </div>
 
